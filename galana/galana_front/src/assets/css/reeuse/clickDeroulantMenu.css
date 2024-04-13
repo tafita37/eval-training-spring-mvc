@@ -1,0 +1,87 @@
+@import './beginDeroulant.css';
+
+.nav-item .collapse {
+    z-index: 999;
+}
+
+.collapse:not(.show) {
+    display: none;
+}
+
+.btn, .fc button, .ajax-upload-dragdrop .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .swal2-styled, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel, .wizard > .actions a, .btn-group.open .dropdown-toggle, .fc .open.fc-button-group .dropdown-toggle, .btn:active, .fc button:active, .ajax-upload-dragdrop .ajax-file-upload:active, .swal2-modal .swal2-buttonswrapper .swal2-styled:active, .wizard > .actions a:active, .btn:focus, .fc button:focus, .ajax-upload-dragdrop .ajax-file-upload:focus, .swal2-modal .swal2-buttonswrapper .swal2-styled:focus, .wizard > .actions a:focus, .btn:hover, .fc button:hover, .ajax-upload-dragdrop .ajax-file-upload:hover, .swal2-modal .swal2-buttonswrapper .swal2-styled:hover, .wizard > .actions a:hover, .btn:visited, .fc button:visited, .ajax-upload-dragdrop .ajax-file-upload:visited, .swal2-modal .swal2-buttonswrapper .swal2-styled:visited, .wizard > .actions a:visited, a, a:active, a:checked, a:focus, a:hover, a:visited, body, button, button:active, button:hover, button:visited, div, input, input:active, input:focus, input:hover, input:visited, select, select:active, select:focus, select:visited, textarea, textarea:active, textarea:focus, textarea:hover, textarea:visited {
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+a, div, h1, h2, h3, h4, h5, p, span {
+    text-shadow: none;
+}
+
+.nav.sub-menu {
+    margin-bottom: 0;
+    margin-top: 0;
+    list-style: none;
+    padding: 0.25rem 0 0 3.07rem;
+    background: #4B49AC;
+    padding-bottom: 12px;
+}
+
+.nav {
+    overflow: hidden;
+    flex-wrap: nowrap;
+    display: flex;
+}
+
+.flex-column, .nav-tabs.nav-tabs-vertical, .nav-tabs.nav-tabs-vertical-custom, .nav-pills.nav-pills-vertical, .email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user {
+    flex-direction: column !important;
+}
+
+.nav.sub-menu .nav-item {
+    padding: 0;
+}
+
+.nav-item {
+    -webkit-transition-duration: 0.25s;
+    -moz-transition-duration: 0.25s;
+    -o-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    transition-property: background;
+    -webkit-transition-property: background;
+}
+
+.nav-item .nav-link {
+    padding: 0.7rem 1rem;
+    position: relative;
+    font-size: 0.875rem;
+    line-height: 1;
+    height: auto;
+    border-top: 0;
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.nav-item.active li {
+    list-style-type: disc;
+    color: white;
+}
+
+.nav-item .nav-link {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    border-radius: 8px;
+    -moz-transition-duration: 0.45s;
+    -o-transition-duration: 0.45s;
+    transition-duration: 0.45s;
+    -webkit-transition-property: color;
+}
+
+a {
+    text-decoration: none;
+}
+
+li.liste-pages .nav-link {
+    color: white !important;
+}

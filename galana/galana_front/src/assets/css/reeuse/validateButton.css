@@ -1,0 +1,28 @@
+.mt-3, .template-demo > .btn, .fc .template-demo > button, .ajax-upload-dragdrop .template-demo > .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .template-demo > .swal2-styled, .wizard > .actions .template-demo > a, .template-demo > .btn-toolbar, .my-3 {
+    margin-top: 1rem !important;
+}
+
+.btn-validate {
+    cursor:pointer;
+    padding: 1rem 3rem;
+    line-height: 1.5;
+    font-size: 0.875rem;
+    font-weight: 400;
+    border-radius: 15px;
+    box-shadow : none;
+    display: block;
+    width: 100%;
+    color: #fff;
+    background-color: #4B49AC;
+    border-color: #4B49AC;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    outline: 0;
+    outline-offset: 0;
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+}

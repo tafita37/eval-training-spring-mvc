@@ -1,0 +1,158 @@
+<script setup>
+    import { onMounted, reactive } from 'vue';
+    import axios from 'axios';
+    import FormInsert from '../reuse/FormInsert.vue';
+    import router from '@/router';
+
+    const laptop = reactive({
+        idMarque : "",
+        idProcesseur : "",
+        idRam : "",
+        idDisque : ""
+    });
+    const responseInsertLaptop = reactive({});
+    const allMarque=reactive({});
+    const allProcesseur=reactive({});
+    const allRam=reactive({});
+    const allDisque=reactive({});
+
+    const getAllMarque = async() => {
+        try {
+            var urlApiSpringBoot = 'http://localhost:8080/laptop/marque/allMarque';
+            const token=localStorage.getItem("tokenMagasin");
+            const headers = {
+                Authorization: `Bearer ${token}`,
+            };
+            var response = await axios.get(urlApiSpringBoot, { headers });
+            Object.assign(allMarque, response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const getAllProcesseur = async() => {
+        try {
+            var urlApiSpringBoot = 'http://localhost:8080/laptop/processeur/allProcesseur';
+            const token=localStorage.getItem("tokenMagasin");
+            const headers = {
+                Authorization: `Bearer ${token}`,
+            };
+            var response = await axios.get(urlApiSpringBoot, {headers});
+            Object.assign(allProcesseur, response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const getAllRam = async() => {
+        try {
+            var urlApiSpringBoot = 'http://localhost:8080/laptop/ram/allRam';
+            const token=localStorage.getItem("tokenMagasin");
+            const headers = {
+                Authorization: `Bearer ${token}`,
+            };
+            var response = await axios.get(urlApiSpringBoot, {headers});
+            Object.assign(allRam, response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const getAllDisque = async() => {
+        try {
+            var urlApiSpringBoot = 'http://localhost:8080/laptop/disque/allDisque';
+            const token=localStorage.getItem("tokenMagasin");
+            const headers = {
+                Authorization: `Bearer ${token}`,
+            };
+            var response = await axios.get(urlApiSpringBoot, {headers});
+            Object.assign(allDisque, response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const handleSubmit = async () => {
+        try {
+            const url = 'http://localhost:8080/laptop/insertLaptop';
+            const data = {
+                model: laptop.model,
+                tailleEcran: laptop.tailleEcran,
+                marque:  
+                {
+                    idMarque : laptop.idMarque
+                },
+                processeur:  
+                {
+                    idProcesseur : laptop.idProcesseur
+                },
+                ram:  
+                {
+                    idRam : laptop.idRam
+                },
+                disque:  
+                {
+                    idDisque : laptop.idDisque
+                },
+                prixAchat: laptop.prixAchat,
+                prixVente: laptop.prixVente
+            };
+            const token=localStorage.getItem("tokenMagasin");
+            const headers = {
+                Authorization: `Bearer ${token}`,
+            };
+            const response = await axios.post(url, data, {headers});
+            Object.assign(responseInsertLaptop, response.data);
+            alert(responseInsertLaptop.message);
+            router.push("/listeLaptop")
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    onMounted(() => {
+        if(!localStorage.getItem("tokenMagasin")) {
+            router.push("/");
+        } else {    
+            getAllMarque();
+            getAllProcesseur();
+            getAllRam();
+            getAllDisque();
+        }
+    });
+</script>
+<template>
+    <FormInsert title-props="Inserer un nouveau laptop" :handle-submit="handleSubmit" submit-message="Inserer le laptop">
+        <input v-model="laptop.model" type="text" placeholder="Reference du laptop" name="model">
+        <input v-model="laptop.tailleEcran" type="number" placeholder="Taille de l'ecran" name="tailleEcran">
+        <select  v-model="laptop.idMarque" name="idMarque" id="">
+            <option value="">Choisissez une marque</option>
+            <option v-for="(marque) in allMarque.data" :key="marque.idMarque" :value="marque.idMarque">
+                {{ marque.nomMarque }}
+            </option>
+        </select>
+        <select  v-model="laptop.idProcesseur" name="idProcesseur" id="">
+            <option value="">Choisissez un processeur</option>
+            <option v-for="(processeur) in allProcesseur.data" :key="processeur.idProcesseur" :value="processeur.idProcesseur">
+                {{ processeur.nomProcesseur }}
+            </option>
+        </select>
+        <select  v-model="laptop.idRam" name="idRam" id="">
+            <option value="">Choisissez une ram</option>
+            <option v-for="(ram) in allRam.data" :key="ram.idRam" :value="ram.idRam">
+                {{ ram.capacite+" Go "+ram.typeRam.nomTypeRam }}
+            </option>
+        </select>
+        <select  v-model="laptop.idDisque" name="idDisque" id="">
+            <option value="">Choisissez un disque dur</option>
+            <option v-for="(disque) in allDisque.data" :key="disque.idDisque" :value="disque.idDisque">
+                {{ disque.capacite+" Go "+disque.typeDisque.nomTypeDisque }}
+            </option>
+        </select>
+        <input v-model="laptop.prixAchat" type="number" placeholder="Prix d'achat" name="prixAchat">
+        <input v-model="laptop.prixVente" type="number" placeholder="Prix de vente" name="prixVente">
+    </FormInsert>
+</template>
+<style scoped>
+    @import "@/assets/css/formulaire.css";
+</style>

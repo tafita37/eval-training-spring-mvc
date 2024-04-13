@@ -1,0 +1,15 @@
+.corbeille {
+    color: red;
+}
+
+.modif {
+    color: green;
+}
+
+.modif.diff {
+    color: blue;
+}
+
+i {
+    cursor: pointer;
+}

@@ -1,0 +1,80 @@
+.text-center {
+    text-align: center !important;
+}
+
+.navbar-brand-wrapper .brand-logo-mini img {
+    width: calc(70px - 30px);
+    max-width: 100%;
+    margin: auto;
+}
+
+.navbar .navbar-brand-wrapper .navbar-brand img {
+    height: 34px;
+    vertical-align: middle;
+}
+
+.navbar-brand-wrapper .navbar-brand.brand-logo-mini {
+    display: none;
+}
+
+.navbar-brand-wrapper .brand-logo-mini {
+    padding-left: 0;
+    text-align: center;
+}
+
+.navbar-brand-wrapper .navbar-brand {
+    color: #27367f;
+    font-size: 1.5rem;
+    margin-right: 0;
+    padding: .25rem 0;
+}
+
+.navbar-brand-wrapper .navbar-brand img {
+    max-width: 100%;
+    height: 34px;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.navbar-brand-wrapper .navbar-brand {
+    color: #27367f;
+    font-size: 1.5rem;
+    padding: .25rem 0;
+}
+
+.navbar-brand-wrapper {
+    background: #ffffff;
+    -webkit-transition: width 0.25s ease, background 0.25s ease;
+    -moz-transition: width 0.25s ease, background 0.25s ease;
+    -ms-transition: width 0.25s ease, background 0.25s ease;
+    width: 235px;
+    height: 60px;
+}
+
+.d-flex, .loader-demo-box, .data-icon-card-primary .background-icon, .data-icon-card-secondary .background-icon, .data-icon-card-success .background-icon, .data-icon-card-info .background-icon, .data-icon-card-warning .background-icon, .data-icon-card-danger .background-icon, .data-icon-card-light .background-icon, .data-icon-card-dark .background-icon, .list-wrapper ul li, .email-wrapper .mail-sidebar .menu-bar .profile-list-item a, .email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user, .email-wrapper .mail-list-container .mail-list .details, .email-wrapper .message-body .attachments-sections ul li .thumb, .email-wrapper .message-body .attachments-sections ul li .details .buttons, .lightGallery .image-tile .demo-gallery-poster, .swal2-modal, .navbar .navbar-menu-wrapper .navbar-nav, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-profile, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .navbar-dropdown .dropdown-item, .navbar .navbar-menu-wrapper .navbar-nav.navbar-nav-right .nav-item {
+    display: flex !important;
+}
+
+.align-items-center, .loader-demo-box, .list-wrapper ul li, .email-wrapper .message-body .attachments-sections ul li .thumb, .email-wrapper .message-body .attachments-sections ul li .details .buttons, .navbar .navbar-menu-wrapper .navbar-nav, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-settings, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-profile, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .navbar-dropdown .dropdown-item, .navbar .navbar-menu-wrapper .navbar-nav.navbar-nav-right .nav-item {
+    align-items: center !important;
+}
+
+.justify-content-center, .email-wrapper .message-body .attachments-sections ul li .thumb {
+    justify-content: center !important;
+}
+
+.navbar-brand {
+    line-height: inherit;
+    white-space: nowrap;
+    display: inline-block;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.mr-5, .mx-5 {
+    margin-right: 3rem !important;
+}
+
+.mr-2, .template-demo > .btn, .fc .template-demo > button, .ajax-upload-dragdrop .template-demo > .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .template-demo > .swal2-styled, .wizard > .actions .template-demo > a, .template-demo > .btn-group, .fc .template-demo > .fc-button-group, .template-demo > .btn-group-vertical, .template-demo > .dropdown, .mx-2 {
+    margin-right: 0.5rem !important;
+}

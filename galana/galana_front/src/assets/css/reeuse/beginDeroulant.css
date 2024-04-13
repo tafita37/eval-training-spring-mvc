@@ -1,0 +1,67 @@
+.nav-item.active {
+    background: #4B49AC;
+}
+
+.nav-item {
+    margin-top: .2rem;
+    -moz-transition-duration: 0.25s;
+    -o-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    -webkit-transition-property: background;
+}
+
+.nav-item.active {
+    border-radius: 8px;
+}
+
+ul li, ol li, dl li {
+    line-height: 1.8;
+}
+
+.nav-item > .nav-link {
+    margin: 0;
+}
+
+.nav-item.active > .nav-link {
+    background: #4B49AC;
+    position: relative;
+}
+
+.nav-item .nav-link {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0.8125rem 1.937rem 0.8125rem 1rem;
+    color: #6C7383;
+    border-radius: 8px;
+    -moz-transition-duration: 0.45s;
+    -o-transition-duration: 0.45s;
+    transition-duration: 0.45s;
+    -webkit-transition-property: color;
+}
+
+.btn, .fc button, .ajax-upload-dragdrop .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .swal2-styled, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel, .wizard > .actions a, .btn-group.open .dropdown-toggle, .fc .open.fc-button-group .dropdown-toggle, .btn:active, .fc button:active, .ajax-upload-dragdrop .ajax-file-upload:active, .swal2-modal .swal2-buttonswrapper .swal2-styled:active, .wizard > .actions a:active, .btn:focus, .fc button:focus, .ajax-upload-dragdrop .ajax-file-upload:focus, .swal2-modal .swal2-buttonswrapper .swal2-styled:focus, .wizard > .actions a:focus, .btn:hover, .fc button:hover, .ajax-upload-dragdrop .ajax-file-upload:hover, .swal2-modal .swal2-buttonswrapper .swal2-styled:hover, .wizard > .actions a:hover, .btn:visited, .fc button:visited, .ajax-upload-dragdrop .ajax-file-upload:visited, .swal2-modal .swal2-buttonswrapper .swal2-styled:visited, .wizard > .actions a:visited, a, a:active, a:checked, a:focus, a:hover, a:visited, body, button, button:active, button:hover, button:visited, div, input, input:active, input:focus, input:hover, input:visited, select, select:active, select:focus, select:visited, textarea, textarea:active, textarea:focus, textarea:hover, textarea:visited {
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+a, div, h1, h2, h3, h4, h5, p, span {
+    text-shadow: none;
+}
+
+.nav-item.active > .nav-link i, .nav-item.active > .nav-link .menu-title, .nav-item.active > .nav-link .fa-chevron-right {
+    color: #fff;
+}
+
+.nav-item .nav-link i.menu-icon {
+    font-size: 1rem;
+    line-height: 1;
+    margin-right: 1rem;
+}
+
+.nav-item .nav-link .menu-title {
+    display: inline-block;
+    font-size: 0.875rem;
+    line-height: 1;
+    vertical-align: middle;
+}

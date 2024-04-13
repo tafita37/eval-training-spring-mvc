@@ -1,0 +1,23 @@
+.text-center {
+    text-align: center !important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.font-weight-light {
+    font-weight: 300 !important;
+}
+
+.text-primary, .list-wrapper .completed .remove {
+    color: #4B49AC !important;
+}
+
+a.text-primary:hover, .list-wrapper .completed a.remove:hover, a.text-primary:focus, .list-wrapper .completed a.remove:focus {
+    color: #343276 !important;
+}
+
+a {
+    cursor: pointer;
+}

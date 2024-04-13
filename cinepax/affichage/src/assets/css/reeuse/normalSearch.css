@@ -1,0 +1,126 @@
+.navbar-nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.d-flex, .loader-demo-box, .data-icon-card-primary .background-icon, .data-icon-card-secondary .background-icon, .data-icon-card-success .background-icon, .data-icon-card-info .background-icon, .data-icon-card-warning .background-icon, .data-icon-card-danger .background-icon, .data-icon-card-light .background-icon, .data-icon-card-dark .background-icon, .list-wrapper ul li, .email-wrapper .mail-sidebar .menu-bar .profile-list-item a, .email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user, .email-wrapper .mail-list-container .mail-list .details, .email-wrapper .message-body .attachments-sections ul li .thumb, .email-wrapper .message-body .attachments-sections ul li .details .buttons, .lightGallery .image-tile .demo-gallery-poster, .swal2-modal, .navbar-nav, .navbar-nav .nav-item.nav-profile, .navbar-nav .nav-item.dropdown .navbar-dropdown .dropdown-item, .navbar-nav.navbar-nav-right .nav-item {
+    margin-inline-start: 15%;
+    display: flex !important;
+}
+
+@media (min-width: 992px) {
+    .mr-lg-2, .mx-lg-2 {
+        margin-right: .5rem !important;
+    }
+}
+
+.navbar-nav .nav-item {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.navbar-nav .nav-item.nav-search {
+    margin-left: 2rem;
+}
+
+@media (min-width: 992px) {
+    .d-lg-block {
+        display: block !important;
+    }
+}
+
+.input-group, .asColorPicker-wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    gap: 5px;
+}
+
+.navbar-nav .nav-item.nav-search .input-group, .navbar-nav .nav-item.nav-search .asColorPicker-wrap {
+    border-radius: 4px;
+    padding: .75rem;
+}
+
+.input-group > .input-group-prepend > .btn, .asColorPicker-wrap > .input-group-prepend > .btn, .fc .input-group > .input-group-prepend > button, .fc .asColorPicker-wrap > .input-group-prepend > button, .ajax-upload-dragdrop .input-group > .input-group-prepend > .ajax-file-upload, .ajax-upload-dragdrop .asColorPicker-wrap > .input-group-prepend > .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .input-group > .input-group-prepend > .swal2-styled, .swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .input-group-prepend > .swal2-styled, .wizard > .actions .input-group > .input-group-prepend > a, .wizard > .actions .asColorPicker-wrap > .input-group-prepend > a, .input-group > .input-group-prepend > .input-group-text, .asColorPicker-wrap > .input-group-prepend > .input-group-text, .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn, .asColorPicker-wrap:not(.has-validation) > .input-group-append:not(:last-child) > .btn, .fc .input-group:not(.has-validation) > .input-group-append:not(:last-child) > button, .fc .asColorPicker-wrap:not(.has-validation) > .input-group-append:not(:last-child) > button, .ajax-upload-dragdrop .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .ajax-file-upload, .ajax-upload-dragdrop .asColorPicker-wrap:not(.has-validation) > .input-group-append:not(:last-child) > .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .swal2-styled, .swal2-modal .swal2-buttonswrapper .asColorPicker-wrap:not(.has-validation) > .input-group-append:not(:last-child) > .swal2-styled, .wizard > .actions .input-group:not(.has-validation) > .input-group-append:not(:last-child) > a, .wizard > .actions .asColorPicker-wrap:not(.has-validation) > .input-group-append:not(:last-child) > a, .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .input-group-text, .asColorPicker-wrap:not(.has-validation) > .input-group-append:not(:last-child) > .input-group-text, .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .btn, .has-validation.asColorPicker-wrap > .input-group-append:nth-last-child(n + 3) > .btn, .fc .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > button, .fc .has-validation.asColorPicker-wrap > .input-group-append:nth-last-child(n + 3) > button, .ajax-upload-dragdrop .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .ajax-file-upload, .ajax-upload-dragdrop .has-validation.asColorPicker-wrap > .input-group-append:nth-last-child(n + 3) > .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .swal2-styled, .swal2-modal .swal2-buttonswrapper .has-validation.asColorPicker-wrap > .input-group-append:nth-last-child(n + 3) > .swal2-styled, .wizard > .actions .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > a, .wizard > .actions .has-validation.asColorPicker-wrap > .input-group-append:nth-last-child(n + 3) > a, .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .input-group-text, .has-validation.asColorPicker-wrap > .input-group-append:nth-last-child(n + 3) > .input-group-text, .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), .asColorPicker-wrap > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), .fc .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle), .fc .asColorPicker-wrap > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle), .ajax-upload-dragdrop .input-group > .input-group-append:last-child > .ajax-file-upload:not(:last-child):not(.dropdown-toggle), .ajax-upload-dragdrop .asColorPicker-wrap > .input-group-append:last-child > .ajax-file-upload:not(:last-child):not(.dropdown-toggle), .swal2-modal .swal2-buttonswrapper .input-group > .input-group-append:last-child > .swal2-styled:not(:last-child):not(.dropdown-toggle), .swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .input-group-append:last-child > .swal2-styled:not(:last-child):not(.dropdown-toggle), .wizard > .actions .input-group > .input-group-append:last-child > a:not(:last-child):not(.dropdown-toggle), .wizard > .actions .asColorPicker-wrap > .input-group-append:last-child > a:not(:last-child):not(.dropdown-toggle), .input-group > .input-group-append:last-child > .input-group-text:not(:last-child), .asColorPicker-wrap > .input-group-append:last-child > .input-group-text:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.navbar-nav .nav-item.nav-search .input-group .input-group-text i, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .input-group-text i {
+    font-size: 1.25rem;
+    color: #6C7383;
+}
+
+.input-group-prepend, .input-group-append {
+    display: flex;
+}
+
+.input-group-prepend {
+    margin-right: -1px;
+}
+
+.navbar-nav .nav-item.nav-search .input-group .form-control, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .form-control, .navbar-nav .nav-item.nav-search .input-group .asColorPicker-input, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input, .navbar-nav .nav-item.nav-search .input-group .dataTables_wrapper select, .dataTables_wrapper .navbar-nav .nav-item.nav-search .input-group select, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select, .dataTables_wrapper .navbar-nav .nav-item.nav-search .asColorPicker-wrap select, .navbar-nav .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .input-group input[type=text], .navbar-nav .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .asColorPicker-wrap input[type=text], .navbar-nav .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .input-group select, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .asColorPicker-wrap select, .navbar-nav .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .input-group input[type=number], .navbar-nav .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .asColorPicker-wrap input[type=number], .navbar-nav .nav-item.nav-search .input-group .select2-container--default .select2-selection--single, .select2-container--default .navbar-nav .nav-item.nav-search .input-group .select2-selection--single, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single, .select2-container--default .navbar-nav .nav-item.nav-search .asColorPicker-wrap .select2-selection--single, .navbar-nav .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .navbar-nav .nav-item.nav-search .input-group .select2-search__field, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .navbar-nav .nav-item.nav-search .asColorPicker-wrap .select2-search__field, .navbar-nav .nav-item.nav-search .input-group .typeahead, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .typeahead, .navbar-nav .nav-item.nav-search .input-group .tt-query, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .tt-query, .navbar-nav .nav-item.nav-search .input-group .tt-hint, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .tt-hint, .navbar-nav .nav-item.nav-search .input-group .input-group-text, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .input-group-text {
+    background: transparent;
+    /* border: 0; */
+    color: #000;
+    padding: 0;
+}
+
+.navbar-nav .nav-item.nav-search .input-group .input-group-text i, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .input-group-text i {
+    font-size: 1.25rem;
+    color: #6C7383;
+}
+
+.form-control, .asColorPicker-input, .dataTables_wrapper select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .select2-container--default .select2-selection--single, .select2-container--default .select2-selection--single .select2-search__field, .typeahead, .tt-query, .tt-hint {
+    display: block;
+    /* height: 2.875rem; */
+    line-height: 1;
+    /* transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; */
+}
+
+.navbar-nav .nav-item.nav-search .input-group .form-control, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .form-control, .navbar-nav .nav-item.nav-search .input-group .asColorPicker-input, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input, .navbar-nav .nav-item.nav-search .input-group .dataTables_wrapper select, .dataTables_wrapper .navbar-nav .nav-item.nav-search .input-group select, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select, .dataTables_wrapper .navbar-nav .nav-item.nav-search .asColorPicker-wrap select, .navbar-nav .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .input-group input[type=text], .navbar-nav .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .asColorPicker-wrap input[type=text], .navbar-nav .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .input-group select, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .asColorPicker-wrap select, .navbar-nav .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .input-group input[type=number], .navbar-nav .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .asColorPicker-wrap input[type=number], .navbar-nav .nav-item.nav-search .input-group .select2-container--default .select2-selection--single, .select2-container--default .navbar-nav .nav-item.nav-search .input-group .select2-selection--single, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single, .select2-container--default .navbar-nav .nav-item.nav-search .asColorPicker-wrap .select2-selection--single, .navbar-nav .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .navbar-nav .nav-item.nav-search .input-group .select2-search__field, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .navbar-nav .nav-item.nav-search .asColorPicker-wrap .select2-search__field, .navbar-nav .nav-item.nav-search .input-group .typeahead, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .typeahead, .navbar-nav .nav-item.nav-search .input-group .tt-query, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .tt-query, .navbar-nav .nav-item.nav-search .input-group .tt-hint, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .tt-hint, .navbar-nav .nav-item.nav-search .input-group .input-group-text, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .input-group-text {
+    background: transparent;
+    /* border: 0; */
+    color: #000;
+    padding: 0;
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 2px;
+}
+
+.input-group > .input-group-prepend > .btn, .asColorPicker-wrap > .input-group-prepend > .btn, .fc .input-group > .input-group-prepend > button, .fc .asColorPicker-wrap > .input-group-prepend > button, .ajax-upload-dragdrop .input-group > .input-group-prepend > .ajax-file-upload, .ajax-upload-dragdrop .asColorPicker-wrap > .input-group-prepend > .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .input-group > .input-group-prepend > .swal2-styled, .swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .input-group-prepend > .swal2-styled, .wizard > .actions .input-group > .input-group-prepend > a, .wizard > .actions .asColorPicker-wrap > .input-group-prepend > a, .input-group > .input-group-prepend > .input-group-text, .asColorPicker-wrap > .input-group-prepend > .input-group-text, .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn, .asColorPicker-wrap:not(.has-validation) > .input-group-append:not(:last-child) > .btn, .fc .input-group:not(.has-validation) > .input-group-append:not(:last-child) > button, .fc .asColorPicker-wrap:not(.has-validation) > .input-group-append:not(:last-child) > button, .ajax-upload-dragdrop .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .ajax-file-upload, .ajax-upload-dragdrop .asColorPicker-wrap:not(.has-validation) > .input-group-append:not(:last-child) > .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .swal2-styled, .swal2-modal .swal2-buttonswrapper .asColorPicker-wrap:not(.has-validation) > .input-group-append:not(:last-child) > .swal2-styled, .wizard > .actions .input-group:not(.has-validation) > .input-group-append:not(:last-child) > a, .wizard > .actions .asColorPicker-wrap:not(.has-validation) > .input-group-append:not(:last-child) > a, .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .input-group-text, .asColorPicker-wrap:not(.has-validation) > .input-group-append:not(:last-child) > .input-group-text, .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .btn, .has-validation.asColorPicker-wrap > .input-group-append:nth-last-child(n + 3) > .btn, .fc .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > button, .fc .has-validation.asColorPicker-wrap > .input-group-append:nth-last-child(n + 3) > button, .ajax-upload-dragdrop .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .ajax-file-upload, .ajax-upload-dragdrop .has-validation.asColorPicker-wrap > .input-group-append:nth-last-child(n + 3) > .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .swal2-styled, .swal2-modal .swal2-buttonswrapper .has-validation.asColorPicker-wrap > .input-group-append:nth-last-child(n + 3) > .swal2-styled, .wizard > .actions .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > a, .wizard > .actions .has-validation.asColorPicker-wrap > .input-group-append:nth-last-child(n + 3) > a, .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .input-group-text, .has-validation.asColorPicker-wrap > .input-group-append:nth-last-child(n + 3) > .input-group-text, .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), .asColorPicker-wrap > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), .fc .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle), .fc .asColorPicker-wrap > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle), .ajax-upload-dragdrop .input-group > .input-group-append:last-child > .ajax-file-upload:not(:last-child):not(.dropdown-toggle), .ajax-upload-dragdrop .asColorPicker-wrap > .input-group-append:last-child > .ajax-file-upload:not(:last-child):not(.dropdown-toggle), .swal2-modal .swal2-buttonswrapper .input-group > .input-group-append:last-child > .swal2-styled:not(:last-child):not(.dropdown-toggle), .swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .input-group-append:last-child > .swal2-styled:not(:last-child):not(.dropdown-toggle), .wizard > .actions .input-group > .input-group-append:last-child > a:not(:last-child):not(.dropdown-toggle), .wizard > .actions .asColorPicker-wrap > .input-group-append:last-child > a:not(:last-child):not(.dropdown-toggle), .input-group > .input-group-append:last-child > .input-group-text:not(:last-child), .asColorPicker-wrap > .input-group-append:last-child > .input-group-text:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.navbar-nav .nav-item.nav-search .input-group .form-control, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .form-control, .navbar-nav .nav-item.nav-search .input-group .asColorPicker-input, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .asColorPicker-input, .navbar-nav .nav-item.nav-search .input-group .dataTables_wrapper select, .dataTables_wrapper .navbar-nav .nav-item.nav-search .input-group select, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .dataTables_wrapper select, .dataTables_wrapper .navbar-nav .nav-item.nav-search .asColorPicker-wrap select, .navbar-nav .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .input-group input[type=text], .navbar-nav .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .asColorPicker-wrap input[type=text], .navbar-nav .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .input-group select, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .asColorPicker-wrap select, .navbar-nav .nav-item.nav-search .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .input-group input[type=number], .navbar-nav .nav-item.nav-search .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .jsgrid .jsgrid-table .jsgrid-filter-row .navbar-nav .nav-item.nav-search .asColorPicker-wrap input[type=number], .navbar-nav .nav-item.nav-search .input-group .select2-container--default .select2-selection--single, .select2-container--default .navbar-nav .nav-item.nav-search .input-group .select2-selection--single, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single, .select2-container--default .navbar-nav .nav-item.nav-search .asColorPicker-wrap .select2-selection--single, .navbar-nav .nav-item.nav-search .input-group .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .navbar-nav .nav-item.nav-search .input-group .select2-search__field, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .select2-container--default .select2-selection--single .select2-search__field, .select2-container--default .select2-selection--single .navbar-nav .nav-item.nav-search .asColorPicker-wrap .select2-search__field, .navbar-nav .nav-item.nav-search .input-group .typeahead, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .typeahead, .navbar-nav .nav-item.nav-search .input-group .tt-query, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .tt-query, .navbar-nav .nav-item.nav-search .input-group .tt-hint, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .tt-hint, .navbar-nav .nav-item.nav-search .input-group .input-group-text, .navbar-nav .nav-item.nav-search .asColorPicker-wrap .input-group-text {
+    background: transparent;
+    /* border: 0; */
+    color: #000;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    gap: 8px;
+}
+
+input,
+select {
+    border-radius: 15px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
