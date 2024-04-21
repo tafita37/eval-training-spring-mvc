@@ -228,3 +228,22 @@
             vente_billet
                 on
             billet.id_billet=vente_billet.id_billet;
+
+-- Film salle et table temporaire
+    create or replace view v_film_salle_tmp_table 
+        as
+            select
+                s.*,
+                f.*,
+                tt.num_seance,
+                tt.date_heure_seance
+            from 
+                tmp_table tt
+                    join 
+                        salle s
+                            on 
+                                tt.salle=s.nom_salle
+                    join
+                        film f
+                            on
+                                f.nom_film=tt.film;

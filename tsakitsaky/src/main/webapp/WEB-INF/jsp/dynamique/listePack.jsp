@@ -61,7 +61,7 @@
                                                         </a>
                                                     </td>
                                                     <td>
-                                                        <a href="">
+                                                        <a href="<% out.println("/ventePack/formulePack/"+listePack.get(i).getIdPack()); %>">
                                                             Formule
                                                         </a>
                                                     </td>

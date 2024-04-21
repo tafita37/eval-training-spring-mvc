@@ -1,5 +1,6 @@
 package eval.cinepax.cinepax;
 
+import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -7,12 +8,7 @@ import java.text.SimpleDateFormat;
 public class Constante {
     public static Time toTimeOfTimestamp(Timestamp timestamp) {
         long timeInMillis = timestamp.getTime();
-
-        // Créer un nouvel objet java.sql.Time à partir du temps en millisecondes
         Time time = new Time(timeInMillis);
-
-        // Afficher la partie Time
-        System.out.println("Partie Time de Timestamp : " + time);
         return time;
     }
 
@@ -59,5 +55,17 @@ public class Constante {
                         "</div>"+
                     "</body>"+
                 "</html>";
+    }
+
+    public static Date dateUtilToDateSql(java.util.Date dateUtil) {
+        return new Date(dateUtil.getTime());
+    }
+
+    public static Timestamp dateUtilToTimestampSql(java.util.Date dateUtil) {
+        return new Timestamp(dateUtil.getTime());
+    }
+
+    public static Time dateUtilToTimeSql(java.util.Date dateUtil) {
+        return new Time(dateUtil.getTime());
     }
 }

@@ -64,4 +64,8 @@ public class PackFormule {
     public void setIdPack(int idPack) {
         this.idPack = idPack;
     }
+
+    public double getCoutRevientFormule() {
+        return this.getQuantiteProduit()*this.getProduit().getCoutRevientBUnite();
+    }
 }

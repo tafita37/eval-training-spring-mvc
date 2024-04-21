@@ -80,34 +80,65 @@ $(function() {
     }
 
   };
-  var doughnutPieData = {
-    datasets: [{
-      data: [30, 40, 30],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.5)',
-        'rgba(54, 162, 235, 0.5)',
-        'rgba(255, 206, 86, 0.5)',
-        'rgba(75, 192, 192, 0.5)',
-        'rgba(153, 102, 255, 0.5)',
-        'rgba(255, 159, 64, 0.5)'
-      ],
-      borderColor: [
-        'rgba(255,99,132,1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)'
-      ],
-    }],
 
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-      'Pink',
-      'Blue',
-      'Yellow',
-    ]
-  };
+  function randomBackgroundColor() {
+    // Générer trois valeurs de couleur RGB aléatoires entre 0 et 255
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+
+    if (r != 255 || g != 255 | b != 255) {
+      var rHex = r.toString(16).padStart(2, '0');
+      var gHex = g.toString(16).padStart(2, '0');
+      var bHex = b.toString(16).padStart(2, '0');
+
+      // Concaténer les chaînes pour former le code couleur hexadécimal complet
+      var color = "#" + rHex + gHex + bHex;
+      return color;
+    }
+    // console.log("cas deux");
+    return randomBackgroundColor();
+  }
+
+  var montantVente=[];
+  var packName=[];
+  var bgColor=[];
+
+  $.ajax({
+    url: '/ventePack/restAPIListeNbMontantAndVente',
+    type: 'GET',
+    dataType: 'json',
+    success: function (data) {  
+      for(var i=0; i<data.length; i++) {
+        montantVente.push(data[i].prixVente);
+        packName.push(data[i].pack.nomPack);
+        bgColor.push(randomBackgroundColor());
+      }
+      var doughnutPieData = {
+        datasets: [{
+          data: montantVente,
+          backgroundColor: bgColor,
+          borderColor: bgColor,
+        }],
+
+        // These labels appear in the legend and in the tooltips when hovering different arcs
+        labels: packName
+      };
+
+      if ($("#pieChart").length) {
+        var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
+        var pieChart = new Chart(pieChartCanvas, {
+          type: 'pie',
+          data: doughnutPieData,
+          options: doughnutPieOptions
+        });
+      }
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      console.error('Erreur lors de la récupération des données de l\'API :', errorThrown);
+    }
+  });
+
   var doughnutPieOptions = {
     responsive: true,
     animation: {
@@ -311,15 +342,6 @@ $(function() {
     var doughnutChartCanvas = $("#doughnutChart").get(0).getContext("2d");
     var doughnutChart = new Chart(doughnutChartCanvas, {
       type: 'doughnut',
-      data: doughnutPieData,
-      options: doughnutPieOptions
-    });
-  }
-
-  if ($("#pieChart").length) {
-    var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
-    var pieChart = new Chart(pieChartCanvas, {
-      type: 'pie',
       data: doughnutPieData,
       options: doughnutPieOptions
     });

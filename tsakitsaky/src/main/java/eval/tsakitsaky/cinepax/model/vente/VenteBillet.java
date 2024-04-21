@@ -2,6 +2,8 @@ package eval.tsakitsaky.cinepax.model.vente;
 
 import java.sql.Date;
 
+import eval.tsakitsaky.cinepax.model.axe.Axe;
+import eval.tsakitsaky.cinepax.model.axe.Client;
 import eval.tsakitsaky.cinepax.model.produit.pack.Pack;
 import eval.tsakitsaky.cinepax.model.user.Etudiant;
 import jakarta.persistence.Column;
@@ -36,7 +38,14 @@ public class VenteBillet {
     Etudiant etudiant;
     @Column(name = "est_paye")
     int estPaye;
-    public VenteBillet(Pack pack, double quantiteVenteBillet, Date dateVenteBillet, Etudiant etudiant)
+    @ManyToOne
+    @JoinColumn(name = "id_client")
+    Client client;
+    @ManyToOne
+    @JoinColumn(name = "id_axe")
+    Axe axe;
+    
+    public VenteBillet(Pack pack, double quantiteVenteBillet, Date dateVenteBillet, Etudiant etudiant, Client client)
     throws Exception {
         this.setPack(pack);
         this.setQuantiteVenteBillet(quantiteVenteBillet);
@@ -44,6 +53,8 @@ public class VenteBillet {
         this.setEtudiant(etudiant);
         this.setCoutRevient(pack.getCoutRevientPack());
         this.setPrixVente(pack.getPrixVentePack());
+        this.setClient(client);
+        this.setAxe(client.getAxe());
     }
     public VenteBillet() {
     }
@@ -122,5 +133,29 @@ public class VenteBillet {
             throw new Exception("Etat de paiement invalide");
         }
         this.estPaye = estPaye;
+    }
+
+    public String getVenteBilletInputForm() {
+        return this.getIdVenteBillet()+" "+this.getPack().getNomPack()+" "+this.getDateVenteBillet();
+    }
+    public Axe getAxe() {
+        return axe;
+    }
+    public void setAxe(Axe axe)
+    throws Exception {
+        if(axe==null) {
+            throw new Exception("Veuillez entrer une axe");
+        }
+        this.axe = axe;
+    }
+    public Client getClient() {
+        return client;
+    }
+    public void setClient(Client client)
+    throws Exception {
+        if(client==null) {
+            throw new Exception("Veuillez entrer un client");
+        }
+        this.client = client;
     }
 }

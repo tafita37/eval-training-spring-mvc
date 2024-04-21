@@ -1,10 +1,13 @@
 <%@page import="java.util.*"%>
 <%@page import="eval.tsakitsaky.cinepax.model.produit.pack.*"%>
+<%@page import="eval.tsakitsaky.cinepax.model.axe.*"%>
 <%@ include file="../static/cssPart.jsp" %>
-    <%@ include file="../static/header.jsp" %>
-        <%@ include file="../static/menuDeroulant.jsp" %>
-            <% List<Pack> listePack=(List<Pack>) request.getAttribute("listePack");
-                    %>
+<%@ include file="../static/header.jsp" %>
+<%@ include file="../static/menuDeroulant.jsp" %>
+<% 
+    List<Pack> listePack=(List<Pack>) request.getAttribute("listePack");
+    List<Client> listeClient = (List<Client>) request.getAttribute("listeClient");
+%>
                     <div class="main-panel">
                         <div class="content-wrapper">
                             <div class="row d-flex justify-content-center">
@@ -29,6 +32,24 @@
                                                                     value=<% out.println(listePack.get(i).getIdPack()); %>
                                                                 >
                                                                     <% out.println(listePack.get(i).getNomPack()); %>
+                                                                </option>
+                                                            <% }
+                                                        %>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputClient">Client</label>
+                                                    <select name="idClient" id="inputClient" class="form-control">
+                                                        <option value="">
+                                                            Choisir un client
+                                                        </option>
+                                                        <%
+                                                            for(int i=0; i<listeClient.size(); i++) {
+                                                                %>
+                                                                <option 
+                                                                    value=<% out.println(listeClient.get(i).getIdClient()); %>
+                                                                >
+                                                                    <% out.println(listeClient.get(i).getNomAfficher()); %>
                                                                 </option>
                                                             <% }
                                                         %>

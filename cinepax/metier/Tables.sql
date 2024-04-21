@@ -88,3 +88,12 @@
             prix_achat double precision not null,
             prix_vente double precision not null
         );
+
+    -- Table temporaire
+        create table tmp_table(
+            id serial primary key,
+            num_seance int not null, 
+            film varchar(50) not null,
+            salle varchar(50) not null,
+            date_heure_seance timestamp not null
+        );

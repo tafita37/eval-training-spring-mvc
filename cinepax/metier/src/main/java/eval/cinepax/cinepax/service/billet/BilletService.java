@@ -1,10 +1,10 @@
 package eval.cinepax.cinepax.service.billet;
 
 import java.sql.Date;
+import java.util.Arrays;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import eval.cinepax.cinepax.model.film.Billet;
 import eval.cinepax.cinepax.model.film.Film;
 import eval.cinepax.cinepax.model.film.Salle;
@@ -13,15 +13,26 @@ import eval.cinepax.cinepax.model.film.VNbVueBFilmJ;
 import eval.cinepax.cinepax.model.place.Place;
 import eval.cinepax.cinepax.model.place.VCountPlaceRangee;
 import eval.cinepax.cinepax.model.place.VPlaceEtat;
+import eval.cinepax.cinepax.model.tmpClass.TmpClass;
 import eval.cinepax.cinepax.model.vente.PlaceVenteBillet;
 import eval.cinepax.cinepax.model.vente.VenteBillet;
 import eval.cinepax.cinepax.repository.billet.BilletRepository;
+import eval.cinepax.cinepax.repository.film.FilmRepository;
+import eval.cinepax.cinepax.repository.film.SalleRepository;
+import eval.cinepax.cinepax.repository.tmpClass.TmpClassRepository;
 import eval.cinepax.cinepax.view.stat.StatVenteBFilm;
+import jakarta.transaction.Transactional;
 
 @Service
 public class BilletService {
     @Autowired
     BilletRepository billetRepository;
+    @Autowired
+    TmpClassRepository tmpClassRepository;
+    @Autowired
+    SalleRepository salleRepository;
+    @Autowired
+    FilmRepository filmRepository;
 
     public List<Billet> getAllBillet() {
         return billetRepository.getAllBillet();
@@ -97,5 +108,13 @@ public class BilletService {
 
     public PlaceVenteBillet findPlaceVenteBilletById(int idPlaceVenteBillet) {
         return billetRepository.findPlaceVenteBilletById(idPlaceVenteBillet).get();
+    }
+
+    @Transactional(rollbackOn = { Exception.class })
+    public void saveListeTmpClass(TmpClass[] listeTmpClass) {
+        tmpClassRepository.saveAll(Arrays.asList(listeTmpClass));
+        salleRepository.insertSalleExcel();
+        filmRepository.saveFilmExcel();
+        billetRepository.insertBilletExcel();
     }
 }

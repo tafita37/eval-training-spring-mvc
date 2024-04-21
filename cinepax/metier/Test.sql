@@ -20,3 +20,11 @@ select
          film.id_film,
          v_nb_vue_b_film_j.date_vente_billet,
          v_nb_vue_b_film_j.nb_vue
+
+
+
+"INSERT INTO billet (id_billet, id_film, id_salle, date_heure_billet) " +
+               "SELECT s.NumSeance, f.id, sl.id, s.Date " +
+               "FROM TaTableSeance s " +
+               "JOIN Film f ON s.Film = f.Film " +
+               "JOIN Salle sl ON s.Salle = sl.Salle"

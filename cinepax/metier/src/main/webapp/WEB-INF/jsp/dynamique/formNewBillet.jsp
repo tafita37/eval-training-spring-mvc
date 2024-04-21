@@ -1,9 +1,12 @@
 <%@page import="java.util.*"%>
 <%@page import="eval.cinepax.cinepax.model.film.*"%>
+<%@page import="eval.cinepax.cinepax.exception.*"%>
 <%
     List<Film> listeFilm=(List<Film>) request.getAttribute("listeFilm");
     List<Salle> listeSalle=(List<Salle>) request.getAttribute("listeSalle");
+    ExcelException excelException = (ExcelException) request.getAttribute("excelError");
 %>
+        <%@ include file="../static/cssPart.jsp" %>
         <%@ include file="../static/header.jsp" %>
         <%@ include file="../static/menuDeroulant.jsp" %>
         <div class="main-panel">
@@ -62,7 +65,65 @@
                                     <button type="submit" class="btn btn-primary mr-2">
                                         Creer
                                     </button>
+                                    <button type="button" class="btn btn-primary mr-2" data-target="#detailPack" data-toggle="modal">
+                                        Importer excel
+                                    </button>
                                 </form>
+                                <%
+                                    if(excelException!=null) {
+                                        %>                                     
+                                        <div class="container mt-5">
+                                            <div class="alert alert-danger" role="alert">
+                                                <%
+                                                    for(int i=0; i<excelException.getListeLineException().size(); i++) {
+                                                        out.println(excelException.getListeLineException().get(i).getMessage()+"<br/>");
+                                                    }
+                                                %>
+                                            </div>
+                                        </div>  
+                                    <% }
+                                %>
+                                <div 
+                                    class="modal fade"
+                                    id="detailPack"
+                                    tabindex="-1" 
+                                    role="dialog"
+                                    aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true"
+                                >
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">         
+                                            <div class="card">
+                                                <div class="card-body"> 
+                                                    <h4 class="card-title">Excel</h4>
+                                                    <p class="card-description">
+                                                        Importation
+                                                    </p>                                  
+                                                    <form action="/billet/importSeanceExcel" method="post" class="col-md-6 mt-3 forms-sample" enctype="multipart/form-data">
+                                                        <div class="form-group">
+                                                            <input type="file" name="file" class="file-upload-default">
+                                                            <div class="input-group col-xs-12">
+                                                                <input type="text" class="form-control file-upload-info"
+                                                                    disabled placeholder="Excel" />
+                                                                <span class="input-group-append">
+                                                                    <button class="file-upload-browse btn btn-primary"
+                                                                        type="button">
+                                                                        <i class="mdi mdi-paperclip" style="font-size: 0.9rem;"></i>
+                                                                    </button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="submit" class="btn btn-primary mr-2">
+                                                                Uploader
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                
+                                </div>
                             </div>
                         </div>
                     </div>

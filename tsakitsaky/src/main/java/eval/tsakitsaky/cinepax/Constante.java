@@ -50,7 +50,7 @@ public class Constante {
         return annee+"-"+mois+"-"+jour;
     }
 
-    public static String getHTMLPDFTemplate(String contenu, String baseUrl, double widthSize) {
+    public static String getHTMLPDFTemplate(String contenu, String baseUrl, double widthSize, String h1Title) {
         return "<!DOCTYPE html>"+
                 "<html lang=\"en\">"+
                     "<head>"+
@@ -58,11 +58,13 @@ public class Constante {
                         "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>"+
                         "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>"+
                         "<title>Skydash Admin</title>"+
+                        // "<link rel=\"stylesheet\" href=\""+baseUrl+"/assets/css/pdf.css\"/>"+
                     "</head>"+
                     "<body>"+
-                        "<div  style=\"width : "+widthSize+"px;\">"+
+                        // "<div  style=\"width : "+widthSize+"px;\">"+
+                            "<h1>"+h1Title+"</h1>"+
                             contenu+
-                        "</div>"+
+                        // "</div>"+
                     "</body>"+
                 "</html>";
     }

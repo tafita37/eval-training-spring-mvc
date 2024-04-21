@@ -27,5 +27,17 @@ public class RoleAuthorizationAspect {
             );
         }
     }
+
+    @Before("execution(* *(..)) && @within(requireRoleMapping)")
+    public void checkRoleClass(RequireRoleMapping requireRoleMapping) {
+        String role = (String) httpSession.getAttribute("role");
+        if (role == null || !Arrays.asList(requireRoleMapping.value()).contains(role)) {
+            throw new UnauthorizedAccessException(
+                "Access denied. You must have on of those roles :\n ["+ 
+                String.join( ",", requireRoleMapping.value())+ 
+                "] to access this resource."
+            );
+        }
+    }
 }
 

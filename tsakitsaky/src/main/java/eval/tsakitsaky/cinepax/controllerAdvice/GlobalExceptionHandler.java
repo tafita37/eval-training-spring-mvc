@@ -4,7 +4,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.resource.NoResourceFoundException;
-
 import eval.tsakitsaky.cinepax.config.UnauthorizedAccessException;
 
 @ControllerAdvice

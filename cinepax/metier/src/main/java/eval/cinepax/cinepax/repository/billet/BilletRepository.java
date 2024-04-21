@@ -39,6 +39,14 @@ public class BilletRepository {
         return query.getResultList();
     }
 
+    @Transactional
+    public void insertBilletExcel() {
+        String sql="insert into billet(id_billet, id_film, id_salle, date_heure_billet)"+ 
+                    "select num_seance, id_film, id_salle, date_heure_seance from v_film_salle_tmp_table";
+        Query query = entityManager.createNativeQuery(sql);
+        query.executeUpdate();
+    }
+
     public List<Film> getAllFilm() {
         String sql="select*from film";
         Query query=entityManager.createNativeQuery(sql, Film.class);

@@ -54,6 +54,27 @@
             quantite_produit double precision not null,
             unique(id_pack, id_produit)
         );
+    
+    -- Axe
+        create table axe(
+            id_axe serial primary key,
+            nom_axe varchar(30) unique not null
+        );
+    
+    -- Quartier
+        create table quartier(
+            id_quartier serial primary key,
+            nom_quartier varchar(30) unique not null,
+            id_axe int references axe(id_axe) not null
+        );
+
+    -- Client
+        create table client(
+            id_client serial primary key,
+            nom_client varchar(30) not null,
+            contact_client varchar(30) unique not null,
+            id_axe int references axe(id_axe)
+        );
 
     -- Vente de billet
         create table vente_billet(
@@ -64,6 +85,8 @@
             cout_revient double precision not null, 
             prix_vente double precision not null, 
             id_etudiant int references etudiant(id_etudiant) not null, 
+            id_client int references client(id_client) not null,
+            id_axe int references axe(id_axe) not null,
             est_paye int not null
         );
 

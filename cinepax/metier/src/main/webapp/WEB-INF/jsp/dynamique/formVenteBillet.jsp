@@ -5,6 +5,7 @@
     List<Billet> listeBillet = (List<Billet>) request.getAttribute("listeBillet");
     List<Place> listePlace = (List<Place>) request.getAttribute("listePlace");
 %>
+        <%@ include file="../static/cssPart.jsp" %>
         <%@ include file="../static/header.jsp" %>
         <%@ include file="../static/menuDeroulant.jsp" %>
         <div class="main-panel">

@@ -35,3 +35,19 @@
                                                                             (2, 5, 6),
                                                                             (2, 6, 7),
                                                                             (2, 7, 8);
+
+-- Axe
+    insert into axe(nom_axe) values('Axe1'),
+                                    ('Axe2');
+
+-- Quartier
+    insert into quartier(nom_quartier, id_axe) values('Tanjombato', 1),
+                                                        ('Andoharanofotsy', 1),
+                                                        ('Iavoloha', 1),
+                                                        ('Anosy', 2),
+                                                        ('Analakely', 2),
+                                                        ('Ambohijatovo', 2);
+
+-- Client
+    insert into client(nom_client, contact_client, id_axe) values('Tafita', '034 18 801 37', 1),
+                                                                    ('Jean', '034 00 000 00', 2);
